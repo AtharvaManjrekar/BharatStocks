@@ -72,7 +72,7 @@ function StockTable() {
             {stocks.map((stock, index) => (
               <tr
                 key={index}
-                className="bg-[#F0FAF9] border-b border-gray-200 last:border-none last:rounded-br-2xl"
+                className=" even:bg-[#FFFFFF]  odd:bg-[#F0FAF9] border-b border-gray-200 last:border-none odd:rounded-br-2xl"
               >
                 <td className="py-5 font-bold pl-10">{stock.symbol}</td>
                 <td className="py-5 text-gray-700 pl-10">{stock.company}</td>
