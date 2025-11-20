@@ -5,6 +5,7 @@ import { TrendingUp } from "lucide-react";
 import { Bookmark } from "lucide-react";
 import { Lock } from "lucide-react";
 import { BarChart } from "lucide-react";
+import StockTable from "../components/StockTable.jsx";
 
 function HomePage() {
   return (
@@ -142,7 +143,7 @@ function HomePage() {
             </p>
           </div>
 
-          <div className="card2 py-5 px-6 rounded-2xl h-[300px] md:w-4/12 bg-white backdrop-blur-lg border border-gray-300 shadow-lg flex flex-col justify-start transition-all duration-300 hover:-border-gray-600 hover:shadow-2xl">
+          <div className="card2 py-5 px-6 rounded-2xl h-[300px] md:w-4/12 bg-white backdrop-blur-lg border border-gray-300 shadow-lg flex flex-col justify-start transition-all duration-300 hover:border-gray-600 hover:shadow-2xl">
             <div className="icons bg-gray-200 w-11 h-11 flex items-center justify-center rounded-lg mb-4">
               <Bookmark size={28} strokeWidth={2} color="#003778" />
             </div>
@@ -189,8 +190,15 @@ function HomePage() {
         </div>
       </div>
       <div className="third_container">
-        <h1>Live Market Data</h1>
-        <h3>Track the top NSE stocks with real-time updates</h3>
+        <h1 className="md:ml-15 text-4xl font-outfit text-center font-black mt-15 mb-1">
+          Live Market Data
+        </h1>
+        <h3 className="md:ml-15 text-xl font-nunito font-light text-center text-gray-600">
+          Track the top NSE stocks with real-time updates
+        </h3>
+        {/* Table */}
+        <div className="table_container mb-20"></div>
+        <StockTable />
       </div>
     </div>
   );
